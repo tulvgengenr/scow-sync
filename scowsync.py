@@ -50,7 +50,8 @@ class ScowSync:
             cmd = f'rsync -az --progress -e \'ssh -p {self.port}\' \
                     {src} {self.user}@{self.address}:{os.path.join(self.destinationpath, filepath)} \
                     --partial --inplace'
-        Popen(cmd, stdout=PIPE, universal_newlines=True, shell=True)
+        os.system(cmd)
+        # Popen(cmd, stdout=PIPE, universal_newlines=True, shell=True)
         # with Popen(cmd, stdout=PIPE, universal_newlines=True, shell=True) as popen:
         #     while popen.poll() is None:
         #         line = popen.stdout.readline()
@@ -65,8 +66,8 @@ class ScowSync:
         cmd = f'rsync -az --progress  -e \'ssh -p {self.port}\' \
                 {src} {self.user}@{self.address}:{dst} \
                 --partial --inplace'
-
-        Popen(cmd, stdout=PIPE, universal_newlines=True, shell=True)
+        os.system(cmd)
+        # Popen(cmd, stdout=PIPE, universal_newlines=True, shell=True)
         # with Popen(cmd, stdout=PIPE, universal_newlines=True, shell=True) as popen:
         #     while popen.poll() is None:
         #         line = popen.stdout.readline()
