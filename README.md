@@ -1,3 +1,7 @@
+# This repository has moved to a new location
+
+This repository has been migrated to [PKUHPC/scow-sync](https://github.com/PKUHPC/scow-sync). Please update your bookmarks. This repository is no longer maintained.
+
 # Scow-Sync
 A file transfer system tool on SCOW
 
